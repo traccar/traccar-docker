@@ -2,7 +2,7 @@ FROM java:8-alpine
 
 MAINTAINER Maxim Zalysin <zalysin.m@gmail.com>
 
-LABEL pro.magnaz.docker.transmission.version="{\"container\": 1.1, \"traccar\": 3.6}"
+LABEL pro.magnaz.docker.traccar.version="{\"container\": 1.1, \"traccar\": 3.6}"
 
 ADD https://github.com/tananaev/traccar/releases/download/v3.6/traccar-other-3.6.zip /tmp/
 
