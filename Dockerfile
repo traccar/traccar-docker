@@ -6,7 +6,7 @@ LABEL pro.magnaz.docker.transmission.version="{\"container\": 1.1, \"traccar\": 
 
 ADD https://github.com/tananaev/traccar/releases/download/v3.6/traccar-other-3.6.zip /tmp/
 
-RUN unzip /tmp/traccar-other-3.6.zip -d /opt/traccar/ && rm /tmp/traccar-other-3.6.zip
+RUN mkdir -p /opt/traccar && unzip -o /tmp/traccar-other-3.6.zip -d /opt/traccar && rm /tmp/traccar-other-3.6.zip
 
 EXPOSE 8082 5000-5150 5000-5150/udp
 
