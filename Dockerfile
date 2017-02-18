@@ -1,15 +1,22 @@
-FROM java:8-alpine
+FROM java:8-jre-alpine
 
 MAINTAINER Maxim Zalysin <zalysin.m@gmail.com>
 
-LABEL pro.magnaz.docker.traccar.version="{\"container\": \"16.11.19\", \"traccar\": \"3.8\"}"
-
-ADD https://github.com/tananaev/traccar/releases/download/v3.8/traccar-other-3.8.zip /tmp/
-
-RUN mkdir -p /opt/traccar && unzip -o /tmp/traccar-other-3.8.zip -d /opt/traccar && rm /tmp/traccar-other-3.8.zip
-
-EXPOSE 8082 5000-5150 5000-5150/udp
+ENV TRACCAR_VERSION 3.10
 
 WORKDIR /opt/traccar
 
-ENTRYPOINT ["java", "-Djava.net.preferIPv4Stack=true", "-Xms512m", "-jar", "tracker-server.jar", "conf/traccar.xml"]
+RUN set -ex && \
+    apk add --no-cache --virtual install-dependencies wget && \
+    \
+    wget -qO /tmp/traccar.zip https://github.com/tananaev/traccar/releases/download/v$TRACCAR_VERSION/traccar-other-$TRACCAR_VERSION.zip && \
+    unzip -qo /tmp/traccar.zip -d /opt/traccar && \
+    rm /tmp/traccar.zip && \
+    \
+    apk del install-dependencies
+
+EXPOSE 8082
+
+ENTRYPOINT ["java"]
+
+CMD ["-Djava.net.preferIPv4Stack=true", "-Xms512m", "-jar", "tracker-server.jar", "conf/traccar.xml"]
