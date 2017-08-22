@@ -13,7 +13,7 @@ RUN set -ex && \
     \
     apk del install-dependencies
 
-EXPOSE 8082
+EXPOSE 8082 5000-5150 5000-5150/udp
 
 ENTRYPOINT ["java"]
 
