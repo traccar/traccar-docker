@@ -4,7 +4,7 @@ Free and Open Source GPS Tracking Platform
 
 [![](https://images.microbadger.com/badges/image/magnaz/traccar.svg)](http://microbadger.com/images/magnaz/traccar "Get your own image badge on microbadger.com") [![](https://images.microbadger.com/badges/version/magnaz/traccar.svg)](http://microbadger.com/images/magnaz/traccar "Get your own version badge on microbadger.com")
 
-Current version: **3.12**
+Current version: **3.14**
 
 Official website: https://www.traccar.org
 
@@ -20,7 +20,7 @@ Official website: https://www.traccar.org
     docker run \
     --rm \
     --entrypoint cat \
-    magnaz/traccar:3.12 \
+    magnaz/traccar:3.14 \
     /opt/traccar/conf/traccar.xml > /var/docker/traccar/traccar.xml
     ```
 
@@ -39,5 +39,5 @@ Official website: https://www.traccar.org
     -v /etc/localtime:/etc/localtime:ro \
     -v /var/docker/traccar/logs:/opt/traccar/logs:rw \
     -v /var/docker/traccar/traccar.xml:/opt/traccar/conf/traccar.xml:ro \
-    image: magnaz/traccar:3.12
+    image: magnaz/traccar:3.14
     ```

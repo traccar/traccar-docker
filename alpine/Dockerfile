@@ -1,6 +1,6 @@
-FROM java:8-jre-alpine
+FROM openjdk:8-jre-alpine
 
-ENV TRACCAR_VERSION 3.12
+ENV TRACCAR_VERSION 3.14
 
 WORKDIR /opt/traccar
 
@@ -15,6 +15,6 @@ RUN set -ex && \
 
 EXPOSE 8082
 
-ENTRYPOINT ["java"]
+ENTRYPOINT ["java", "-Djava.net.preferIPv4Stack=true", "-Xms512m", "-jar", "tracker-server.jar"]
 
-CMD ["-Djava.net.preferIPv4Stack=true", "-Xms512m", "-jar", "tracker-server.jar", "conf/traccar.xml"]
+CMD ["conf/traccar.xml"]
