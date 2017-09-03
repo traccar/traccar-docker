@@ -1,12 +1,14 @@
-Traccar server on Alpine Linux
-====
-Free and Open Source GPS Tracking Platform
+Traccar
+---
+Modern GPS Tracking Platform
 
-[![](https://images.microbadger.com/badges/image/magnaz/traccar.svg)](http://microbadger.com/images/magnaz/traccar "Get your own image badge on microbadger.com") [![](https://images.microbadger.com/badges/version/magnaz/traccar.svg)](http://microbadger.com/images/magnaz/traccar "Get your own version badge on microbadger.com")
-
+Official website: <https://www.traccar.org>  
 Current version: **3.14**
 
-Official website: https://www.traccar.org
+### Current tags:
+
+- **3.14-alpine**, **3.14**, **alpine** or **latest** ([alpine/Dockerfile](https://github.com/magna-z/docker-traccar/blob/master/alpine/Dockerfile)) [![](https://images.microbadger.com/badges/image/magnaz/traccar:alpine.svg)](https://microbadger.com/images/magnaz/traccar:alpine)
+- **3.14-debian**, **debian** ([debian/Dockerfile](https://github.com/magna-z/docker-traccar/blob/master/debian/Dockerfile)) [![](https://images.microbadger.com/badges/image/magnaz/traccar:debian.svg)](https://microbadger.com/images/magnaz/traccar:debian)
 
 ### Create container example:
 
@@ -20,7 +22,7 @@ Official website: https://www.traccar.org
     docker run \
     --rm \
     --entrypoint cat \
-    magnaz/traccar:3.14 \
+    magnaz/traccar \
     /opt/traccar/conf/traccar.xml > /var/docker/traccar/traccar.xml
     ```
 
@@ -39,5 +41,5 @@ Official website: https://www.traccar.org
     -v /etc/localtime:/etc/localtime:ro \
     -v /var/docker/traccar/logs:/opt/traccar/logs:rw \
     -v /var/docker/traccar/traccar.xml:/opt/traccar/conf/traccar.xml:ro \
-    image: magnaz/traccar:3.14
+    image: magnaz/traccar
     ```
