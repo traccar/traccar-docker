@@ -9,7 +9,7 @@ RUN set -ex && \
     unzip -qo /tmp/traccar.zip -d /opt/traccar && \
     rm /tmp/traccar.zip
 
-EXPOSE 8082
+EXPOSE 8082 5000-5150
 
 ENTRYPOINT ["java"]
 
