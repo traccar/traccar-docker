@@ -13,7 +13,7 @@ RUN set -ex && \
     \
     apk del wget
 
-EXPOSE 8082
+EXPOSE 8082 5000-5150
 
 ENTRYPOINT ["java"]
 
