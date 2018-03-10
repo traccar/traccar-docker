@@ -1,4 +1,4 @@
-FROM openjdk:8-jre-slim
+FROM openjdk:8-jre
 
 ENV TRACCAR_VERSION 3.16
 
