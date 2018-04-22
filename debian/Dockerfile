@@ -13,4 +13,4 @@ EXPOSE 8082
 
 ENTRYPOINT ["java"]
 
-CMD ["-Djava.net.preferIPv4Stack=true", "-Xms512m", "-jar", "tracker-server.jar", "conf/traccar.xml"]
+CMD ["-Djava.net.preferIPv4Stack=true", "-Xms512m", "-Xmx512m", "-jar", "tracker-server.jar", "conf/traccar.xml"]
