@@ -1,6 +1,6 @@
-Traccar
+Traccar in Docker
 ---
-Modern GPS Tracking Platform
+Traccar GPS Tracking System in Docker image.
 
 Official website: <https://www.traccar.org>  
 Current version: **3.16**
@@ -14,7 +14,7 @@ Current version: **3.16**
 - **3.14-alpine**, **3.14** ([alpine/Dockerfile](https://github.com/magna-z/docker-traccar/blob/8acfd19b9f4f060ca4ce7e09d35338b65069248b/alpine/Dockerfile)) [![](https://images.microbadger.com/badges/image/magnaz/traccar:3.14-alpine.svg)](https://microbadger.com/images/magnaz/traccar:3.14-alpine)
 - **3.14-debian** ([debian/Dockerfile](https://github.com/magna-z/docker-traccar/blob/8acfd19b9f4f060ca4ce7e09d35338b65069248b/debian/Dockerfile)) [![](https://images.microbadger.com/badges/image/magnaz/traccar:3.14-debian.svg)](https://microbadger.com/images/magnaz/traccar:3.14-debian)
 
-### Create container example:
+### Container creation example:
 
 1. **Create work directories:**
     ```bash
@@ -45,5 +45,5 @@ Current version: **3.16**
     -v /etc/localtime:/etc/localtime:ro \
     -v /var/docker/traccar/logs:/opt/traccar/logs:rw \
     -v /var/docker/traccar/traccar.xml:/opt/traccar/conf/traccar.xml:ro \
-    image: magnaz/traccar
+    magnaz/traccar
     ```
