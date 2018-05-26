@@ -3,12 +3,14 @@ Traccar in Docker
 Traccar GPS Tracking System in Docker image.
 
 Official website: <https://www.traccar.org>  
-Current version: **3.16**
+Current version: **3.17**
 
 ### Current tags:
 
-- **3.16-alpine**, **3.16**, **alpine** or **latest** ([alpine/Dockerfile](https://github.com/traccar/traccar-docker/blob/master/alpine/Dockerfile)) [![](https://images.microbadger.com/badges/image/traccar/traccar:alpine.svg)](https://microbadger.com/images/traccar/traccar:alpine)
-- **3.16-debian**, **debian** ([debian/Dockerfile](https://github.com/traccar/traccar-docker/blob/master/debian/Dockerfile)) [![](https://images.microbadger.com/badges/image/traccar/traccar:debian.svg)](https://microbadger.com/images/traccar/traccar:debian)
+- **3.17-alpine**, **3.17**, **alpine** or **latest** ([alpine/Dockerfile](https://github.com/traccar/traccar-docker/blob/3.17/alpine/Dockerfile)) [![](https://images.microbadger.com/badges/image/traccar/traccar:3.17-alpine.svg)](https://microbadger.com/images/traccar/traccar:3.17-alpine)
+- **3.17-debian**, **debian** ([debian/Dockerfile](https://github.com/traccar/traccar-docker/blob/3.17/debian/Dockerfile)) [![](https://images.microbadger.com/badges/image/traccar/traccar:3.17-debian.svg)](https://microbadger.com/images/traccar/traccar:3.17-debian)
+- **3.16-alpine**, **3.16** ([alpine/Dockerfile](https://github.com/traccar/traccar-docker/blob/3.16/alpine/Dockerfile)) [![](https://images.microbadger.com/badges/image/traccar/traccar:3.16-alpine.svg)](https://microbadger.com/images/traccar/traccar:3.16-alpine)
+- **3.16-debian** ([debian/Dockerfile](https://github.com/traccar/traccar-docker/blob/3.16/debian/Dockerfile)) [![](https://images.microbadger.com/badges/image/traccar/traccar:3.16-debian.svg)](https://microbadger.com/images/traccar/traccar:3.16-debian)
 
 ### Container creation example:
 
