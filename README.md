@@ -3,11 +3,13 @@ Traccar in Docker
 Traccar GPS Tracking System in Docker image.
 
 Official website: <https://www.traccar.org>  
-Current version: **3.17**
+Current version: **4.0**
 
 ### Current tags:
 
-- **3.17-alpine**, **3.17**, **alpine** or **latest** ([alpine/Dockerfile](https://github.com/traccar/traccar-docker/blob/3.17/alpine/Dockerfile)) [![](https://images.microbadger.com/badges/image/traccar/traccar:3.17-alpine.svg)](https://microbadger.com/images/traccar/traccar:3.17-alpine)
+- **4.0-alpine**, **4.0**, **alpine** or **latest** ([alpine/Dockerfile](https://github.com/traccar/traccar-docker/blob/4.0/alpine/Dockerfile)) [![](https://images.microbadger.com/badges/image/traccar/traccar:4.0-alpine.svg)](https://microbadger.com/images/traccar/traccar:4.0-alpine)
+- **4.0-debian**, **debian** ([debian/Dockerfile](https://github.com/traccar/traccar-docker/blob/4.0/debian/Dockerfile)) [![](https://images.microbadger.com/badges/image/traccar/traccar:4.0-debian.svg)](https://microbadger.com/images/traccar/traccar:4.0-debian)
+- **3.17-alpine**, **3.17** ([alpine/Dockerfile](https://github.com/traccar/traccar-docker/blob/3.17/alpine/Dockerfile)) [![](https://images.microbadger.com/badges/image/traccar/traccar:3.17-alpine.svg)](https://microbadger.com/images/traccar/traccar:3.17-alpine)
 - **3.17-debian**, **debian** ([debian/Dockerfile](https://github.com/traccar/traccar-docker/blob/3.17/debian/Dockerfile)) [![](https://images.microbadger.com/badges/image/traccar/traccar:3.17-debian.svg)](https://microbadger.com/images/traccar/traccar:3.17-debian)
 - **3.16-alpine**, **3.16** ([alpine/Dockerfile](https://github.com/traccar/traccar-docker/blob/3.16/alpine/Dockerfile)) [![](https://images.microbadger.com/badges/image/traccar/traccar:3.16-alpine.svg)](https://microbadger.com/images/traccar/traccar:3.16-alpine)
 - **3.16-debian** ([debian/Dockerfile](https://github.com/traccar/traccar-docker/blob/3.16/debian/Dockerfile)) [![](https://images.microbadger.com/badges/image/traccar/traccar:3.16-debian.svg)](https://microbadger.com/images/traccar/traccar:3.16-debian)
@@ -43,5 +45,5 @@ Current version: **3.17**
     -v /etc/localtime:/etc/localtime:ro \
     -v /var/docker/traccar/logs:/opt/traccar/logs:rw \
     -v /var/docker/traccar/traccar.xml:/opt/traccar/conf/traccar.xml:ro \
-    traccar/traccar
+    traccar/traccar:latest
     ```
