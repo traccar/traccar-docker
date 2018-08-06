@@ -1,11 +1,10 @@
 FROM openjdk:8-jre
 
-ENV TRACCAR_VERSION 3.17
-
 WORKDIR /opt/traccar
 
 RUN set -ex && \
-    curl -LSso /tmp/traccar.zip https://github.com/tananaev/traccar/releases/download/v$TRACCAR_VERSION/traccar-other-$TRACCAR_VERSION.zip && \
+    TRACCAR_DOWNLOAD_LINK=$(curl --silent https://api.github.com/repos/traccar/traccar/releases/latest | grep '"browser_download_url":' | sed -E 's/.*"([^"]+)".*/\1/' | grep 'other') && \
+    curl -LSso /tmp/traccar.zip $TRACCAR_DOWNLOAD_LINK && \
     unzip -qo /tmp/traccar.zip -d /opt/traccar && \
     rm /tmp/traccar.zip
 
