@@ -3,7 +3,7 @@ FROM openjdk:8-jre
 WORKDIR /opt/traccar
 
 RUN set -ex && \
-    TRACCAR_DOWNLOAD_LINK=$(curl --silent https://api.github.com/repos/traccar/traccar/releases/latest | grep '"browser_download_url":' | sed -E 's/.*"([^"]+)".*/\1/' | grep 'other') && \
+    TRACCAR_DOWNLOAD_LINK=$(curl --silent "https://api.github.com/repos/traccar/traccar/releases/latest" | grep -Eo '"browser_download_url": ".*other.*"' | sed -E 's/.*"([^"]+)".*/\1/') && \
     curl -LSso /tmp/traccar.zip $TRACCAR_DOWNLOAD_LINK && \
     unzip -qo /tmp/traccar.zip -d /opt/traccar && \
     rm /tmp/traccar.zip
