@@ -26,7 +26,7 @@ Current version: **4.0**
     docker run \
     --rm \
     --entrypoint cat \
-    traccar/traccar \
+    traccar/traccar:4.0 \
     /opt/traccar/conf/traccar.xml > /var/docker/traccar/traccar.xml
     ```
 
@@ -41,9 +41,13 @@ Current version: **4.0**
     -p 80:8082 \
     -p 5000-5150:5000-5150 \
     -p 5000-5150:5000-5150/udp \
-    -v /etc/timezone:/etc/timezone:ro \
-    -v /etc/localtime:/etc/localtime:ro \
     -v /var/docker/traccar/logs:/opt/traccar/logs:rw \
     -v /var/docker/traccar/traccar.xml:/opt/traccar/conf/traccar.xml:ro \
-    traccar/traccar:latest
+    traccar/traccar:4.0
     ```
+
+### Default JRE options:
+
+- -Xms512m
+- -Xmx512m
+- -Djava.net.preferIPv4Stack=true
