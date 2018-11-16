@@ -3,10 +3,11 @@ Traccar in Docker
 Traccar GPS Tracking System in Docker image.
 
 Official website: <https://www.traccar.org>  
-Current version: **4.1**
+Current version: **4.2**
 
 ### Current tags:
-
+- **4.2-alpine**, **4.2**, **alpine** or **latest** ([alpine/Dockerfile](https://github.com/traccar/traccar-docker/blob/4.2/alpine/Dockerfile)) [![](https://images.microbadger.com/badges/image/traccar/traccar:4.2-alpine.svg)](https://microbadger.com/images/traccar/traccar:4.2-alpine)
+- **4.2-debian**, **debian** ([debian/Dockerfile](https://github.com/traccar/traccar-docker/blob/4.2/debian/Dockerfile)) [![](https://images.microbadger.com/badges/image/traccar/traccar:4.2-debian.svg)](https://microbadger.com/images/traccar/traccar:4.2-debian)
 - **4.1-alpine**, **4.1**, **alpine** or **latest** ([alpine/Dockerfile](https://github.com/traccar/traccar-docker/blob/4.1/alpine/Dockerfile)) [![](https://images.microbadger.com/badges/image/traccar/traccar:4.1-alpine.svg)](https://microbadger.com/images/traccar/traccar:4.1-alpine)
 - **4.1-debian**, **debian** ([debian/Dockerfile](https://github.com/traccar/traccar-docker/blob/4.1/debian/Dockerfile)) [![](https://images.microbadger.com/badges/image/traccar/traccar:4.1-debian.svg)](https://microbadger.com/images/traccar/traccar:4.1-debian)
 - **4.0-alpine**, **4.0** ([alpine/Dockerfile](https://github.com/traccar/traccar-docker/blob/4.0/alpine/Dockerfile)) [![](https://images.microbadger.com/badges/image/traccar/traccar:4.0-alpine.svg)](https://microbadger.com/images/traccar/traccar:4.0-alpine)
@@ -28,7 +29,7 @@ Current version: **4.1**
     docker run \
     --rm \
     --entrypoint cat \
-    traccar/traccar:4.1 \
+    traccar/traccar:4.2 \
     /opt/traccar/conf/traccar.xml > /var/docker/traccar/traccar.xml
     ```
 
@@ -45,7 +46,7 @@ Current version: **4.1**
     -p 5000-5150:5000-5150/udp \
     -v /var/docker/traccar/logs:/opt/traccar/logs:rw \
     -v /var/docker/traccar/traccar.xml:/opt/traccar/conf/traccar.xml:ro \
-    traccar/traccar:4.1
+    traccar/traccar:4.2
     ```
 
 ### Default JRE options:
