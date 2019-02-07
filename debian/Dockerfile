@@ -1,6 +1,6 @@
 FROM openjdk:8-jre
 
-ENV TRACCAR_VERSION 4.2
+ENV TRACCAR_VERSION 4.3
 
 WORKDIR /opt/traccar
 
