@@ -3,10 +3,13 @@ Traccar in Docker
 Traccar GPS Tracking System in Docker image.
 
 Official website: <https://www.traccar.org>  
-Current version: **4.2**
+Current version: **4.3**
 
 ### Current tags:
-- **4.2-alpine**, **4.2**, **alpine** or **latest** ([alpine/Dockerfile](https://github.com/traccar/traccar-docker/blob/4.2/alpine/Dockerfile)) [![](https://images.microbadger.com/badges/image/traccar/traccar:4.2-alpine.svg)](https://microbadger.com/images/traccar/traccar:4.2-alpine)
+- **4.3-alpine**, **4.3**, **alpine** or **latest** ([alpine/Dockerfile](https://github.com/traccar/traccar-docker/blob/4.3/alpine/Dockerfile)) [![](https://images.microbadger.com/badges/image/traccar/traccar:4.3-alpine.svg)](https://microbadger.com/images/traccar/traccar:4.3-alpine)
+- **4.3-debian**, **debian** ([debian/Dockerfile](https://github.com/traccar/traccar-docker/blob/4.3/debian/Dockerfile)) [![](https://images.microbadger.com/badges/image/traccar/traccar:4.3-debian.svg)](https://microbadger.com/images/traccar/traccar:4.3-debian)
+
+- **4.2-alpine**, **4.2**, **alpine**  ([alpine/Dockerfile](https://github.com/traccar/traccar-docker/blob/4.2/alpine/Dockerfile)) [![](https://images.microbadger.com/badges/image/traccar/traccar:4.2-alpine.svg)](https://microbadger.com/images/traccar/traccar:4.2-alpine)
 - **4.2-debian**, **debian** ([debian/Dockerfile](https://github.com/traccar/traccar-docker/blob/4.2/debian/Dockerfile)) [![](https://images.microbadger.com/badges/image/traccar/traccar:4.2-debian.svg)](https://microbadger.com/images/traccar/traccar:4.2-debian)
 - **4.1-alpine**, **4.1** ([alpine/Dockerfile](https://github.com/traccar/traccar-docker/blob/4.1/alpine/Dockerfile)) [![](https://images.microbadger.com/badges/image/traccar/traccar:4.1-alpine.svg)](https://microbadger.com/images/traccar/traccar:4.1-alpine)
 - **4.1-debian** ([debian/Dockerfile](https://github.com/traccar/traccar-docker/blob/4.1/debian/Dockerfile)) [![](https://images.microbadger.com/badges/image/traccar/traccar:4.1-debian.svg)](https://microbadger.com/images/traccar/traccar:4.1-debian)
