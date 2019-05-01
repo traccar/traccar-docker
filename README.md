@@ -36,7 +36,7 @@ Current version: **4.4**
     /opt/traccar/conf/traccar.xml > /var/docker/traccar/traccar.xml
     ```
 
-1. **Edit traccar.xml: <https://www.traccar.org/configuration-file/>**
+1. **Edit traccar.xml:** <https://www.traccar.org/configuration-file/>
 
 1. **Create container:**
     ```bash
