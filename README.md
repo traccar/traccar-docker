@@ -3,11 +3,13 @@ Traccar in Docker
 Traccar GPS Tracking System in Docker image.
 
 Official website: <https://www.traccar.org>  
-Current version: **4.3**
+Current version: **4.4**
 
 ### Current tags:
-- **4.3-alpine**, **4.3**, **alpine** or **latest** ([alpine/Dockerfile](https://github.com/traccar/traccar-docker/blob/4.3/alpine/Dockerfile)) [![](https://images.microbadger.com/badges/image/traccar/traccar:4.3-alpine.svg)](https://microbadger.com/images/traccar/traccar:4.3-alpine)
-- **4.3-debian**, **debian** ([debian/Dockerfile](https://github.com/traccar/traccar-docker/blob/4.3/debian/Dockerfile)) [![](https://images.microbadger.com/badges/image/traccar/traccar:4.3-debian.svg)](https://microbadger.com/images/traccar/traccar:4.3-debian)
+- **4.4-alpine**, **4.4**, **alpine** or **latest** ([alpine/Dockerfile](https://github.com/traccar/traccar-docker/blob/4.4/alpine/Dockerfile)) [![](https://images.microbadger.com/badges/image/traccar/traccar:4.4-alpine.svg)](https://microbadger.com/images/traccar/traccar:4.4-alpine)
+- **4.4-debian**, **debian** ([debian/Dockerfile](https://github.com/traccar/traccar-docker/blob/4.4/debian/Dockerfile)) [![](https://images.microbadger.com/badges/image/traccar/traccar:4.4-debian.svg)](https://microbadger.com/images/traccar/traccar:4.4-debian)
+- **4.3-alpine**, **4.3** ([alpine/Dockerfile](https://github.com/traccar/traccar-docker/blob/4.3/alpine/Dockerfile)) [![](https://images.microbadger.com/badges/image/traccar/traccar:4.3-alpine.svg)](https://microbadger.com/images/traccar/traccar:4.3-alpine)
+- **4.3-debian** ([debian/Dockerfile](https://github.com/traccar/traccar-docker/blob/4.3/debian/Dockerfile)) [![](https://images.microbadger.com/badges/image/traccar/traccar:4.3-debian.svg)](https://microbadger.com/images/traccar/traccar:4.3-debian)
 - **4.2-alpine**, **4.2** ([alpine/Dockerfile](https://github.com/traccar/traccar-docker/blob/4.2/alpine/Dockerfile)) [![](https://images.microbadger.com/badges/image/traccar/traccar:4.2-alpine.svg)](https://microbadger.com/images/traccar/traccar:4.2-alpine)
 - **4.2-debian** ([debian/Dockerfile](https://github.com/traccar/traccar-docker/blob/4.2/debian/Dockerfile)) [![](https://images.microbadger.com/badges/image/traccar/traccar:4.2-debian.svg)](https://microbadger.com/images/traccar/traccar:4.2-debian)
 - **4.1-alpine**, **4.1** ([alpine/Dockerfile](https://github.com/traccar/traccar-docker/blob/4.1/alpine/Dockerfile)) [![](https://images.microbadger.com/badges/image/traccar/traccar:4.1-alpine.svg)](https://microbadger.com/images/traccar/traccar:4.1-alpine)
@@ -20,7 +22,6 @@ Current version: **4.3**
 - **3.16-debian** ([debian/Dockerfile](https://github.com/traccar/traccar-docker/blob/3.16/debian/Dockerfile)) [![](https://images.microbadger.com/badges/image/traccar/traccar:3.16-debian.svg)](https://microbadger.com/images/traccar/traccar:3.16-debian)
 
 ### Container creation example:
-
 1. **Create work directories:**
     ```bash
     mkdir -p /var/docker/traccar/logs
@@ -31,7 +32,7 @@ Current version: **4.3**
     docker run \
     --rm \
     --entrypoint cat \
-    traccar/traccar:4.3 \
+    traccar/traccar:latest \
     /opt/traccar/conf/traccar.xml > /var/docker/traccar/traccar.xml
     ```
 
@@ -48,11 +49,10 @@ Current version: **4.3**
     -p 5000-5150:5000-5150/udp \
     -v /var/docker/traccar/logs:/opt/traccar/logs:rw \
     -v /var/docker/traccar/traccar.xml:/opt/traccar/conf/traccar.xml:ro \
-    traccar/traccar:4.3
+    traccar/traccar:latest
     ```
 
 ### Default JRE options:
-
 - -Xms512m
 - -Xmx512m
 - -Djava.net.preferIPv4Stack=true
