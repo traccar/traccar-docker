@@ -1,6 +1,6 @@
 FROM openjdk:8-jre-slim
 
-ENV TRACCAR_VERSION 4.4
+ENV TRACCAR_VERSION 4.5
 
 WORKDIR /opt/traccar
 
