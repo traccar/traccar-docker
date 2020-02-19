@@ -7,8 +7,8 @@ Official website: <https://www.traccar.org>
 [![](https://images.microbadger.com/badges/version/traccar/traccar:4.8.svg)](https://microbadger.com/images/traccar/traccar:4.8)
 
 ### Current tags:
-- **4.8-alpine**, **4.8**, **alpine** or **latest** ([alpine/Dockerfile](https://github.com/traccar/traccar-docker/blob/v4.8/alpine/Dockerfile)) [![](https://images.microbadger.com/badges/image/traccar/traccar:4.8-alpine.svg)](https://microbadger.com/images/traccar/traccar:4.8-alpine)
-- **4.8-debian**, **debian** ([debian/Dockerfile](https://github.com/traccar/traccar-docker/blob/v4.8/debian/Dockerfile)) [![](https://images.microbadger.com/badges/image/traccar/traccar:4.8-debian.svg)](https://microbadger.com/images/traccar/traccar:4.8-debian)
+- **4.8-alpine**, **4-alpine**, **4.8**, **alpine** or **latest** ([alpine/Dockerfile](https://github.com/traccar/traccar-docker/blob/v4.8/alpine/Dockerfile)) [![](https://images.microbadger.com/badges/image/traccar/traccar:4.8-alpine.svg)](https://microbadger.com/images/traccar/traccar:4.8-alpine)
+- **4.8-debian**, **4-debian**, **debian** ([debian/Dockerfile](https://github.com/traccar/traccar-docker/blob/v4.8/debian/Dockerfile)) [![](https://images.microbadger.com/badges/image/traccar/traccar:4.8-debian.svg)](https://microbadger.com/images/traccar/traccar:4.8-debian)
 - **4.7-alpine**, **4.7** ([alpine/Dockerfile](https://github.com/traccar/traccar-docker/blob/v4.7/alpine/Dockerfile)) [![](https://images.microbadger.com/badges/image/traccar/traccar:4.7-alpine.svg)](https://microbadger.com/images/traccar/traccar:4.7-alpine)
 - **4.7-debian** ([debian/Dockerfile](https://github.com/traccar/traccar-docker/blob/v4.7/debian/Dockerfile)) [![](https://images.microbadger.com/badges/image/traccar/traccar:4.7-debian.svg)](https://microbadger.com/images/traccar/traccar:4.7-debian)
 - **4.6-alpine**, **4.6** ([alpine/Dockerfile](https://github.com/traccar/traccar-docker/blob/v4.6/alpine/Dockerfile)) [![](https://images.microbadger.com/badges/image/traccar/traccar:4.6-alpine.svg)](https://microbadger.com/images/traccar/traccar:4.6-alpine)
