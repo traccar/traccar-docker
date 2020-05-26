@@ -1,36 +1,39 @@
 Traccar in Docker
-===
+---
 
 Traccar GPS Tracking System in Docker image.
 
-Official website: <https://www.traccar.org>  
+Official website: <https://www.traccar.org>
+
+
 [![](https://images.microbadger.com/badges/version/traccar/traccar:4.8.svg)](https://microbadger.com/images/traccar/traccar:4.8)
+[![](https://images.microbadger.com/badges/image/traccar/traccar:4.8.svg)](https://microbadger.com/images/traccar/traccar:4.8)
 
-### Current tags:
-- **4.8-alpine**, **4-alpine**, **4.8**, **alpine** or **latest** ([alpine/Dockerfile](https://github.com/traccar/traccar-docker/blob/v4.8/alpine/Dockerfile)) [![](https://images.microbadger.com/badges/image/traccar/traccar:4.8-alpine.svg)](https://microbadger.com/images/traccar/traccar:4.8-alpine)
-- **4.8-debian**, **4-debian**, **debian** ([debian/Dockerfile](https://github.com/traccar/traccar-docker/blob/v4.8/debian/Dockerfile)) [![](https://images.microbadger.com/badges/image/traccar/traccar:4.8-debian.svg)](https://microbadger.com/images/traccar/traccar:4.8-debian)
-- **4.7-alpine**, **4.7** ([alpine/Dockerfile](https://github.com/traccar/traccar-docker/blob/v4.7/alpine/Dockerfile)) [![](https://images.microbadger.com/badges/image/traccar/traccar:4.7-alpine.svg)](https://microbadger.com/images/traccar/traccar:4.7-alpine)
-- **4.7-debian** ([debian/Dockerfile](https://github.com/traccar/traccar-docker/blob/v4.7/debian/Dockerfile)) [![](https://images.microbadger.com/badges/image/traccar/traccar:4.7-debian.svg)](https://microbadger.com/images/traccar/traccar:4.7-debian)
-- **4.6-alpine**, **4.6** ([alpine/Dockerfile](https://github.com/traccar/traccar-docker/blob/v4.6/alpine/Dockerfile)) [![](https://images.microbadger.com/badges/image/traccar/traccar:4.6-alpine.svg)](https://microbadger.com/images/traccar/traccar:4.6-alpine)
-- **4.6-debian** ([debian/Dockerfile](https://github.com/traccar/traccar-docker/blob/v4.6/debian/Dockerfile)) [![](https://images.microbadger.com/badges/image/traccar/traccar:4.6-debian.svg)](https://microbadger.com/images/traccar/traccar:4.6-debian)
-- **4.5-alpine**, **4.5** ([alpine/Dockerfile](https://github.com/traccar/traccar-docker/blob/v4.5/alpine/Dockerfile)) [![](https://images.microbadger.com/badges/image/traccar/traccar:4.5-alpine.svg)](https://microbadger.com/images/traccar/traccar:4.5-alpine)
-- **4.5-debian** ([debian/Dockerfile](https://github.com/traccar/traccar-docker/blob/v4.5/debian/Dockerfile)) [![](https://images.microbadger.com/badges/image/traccar/traccar:4.5-debian.svg)](https://microbadger.com/images/traccar/traccar:4.5-debian)
-- **4.4-alpine**, **4.4** ([alpine/Dockerfile](https://github.com/traccar/traccar-docker/blob/v4.4/alpine/Dockerfile)) [![](https://images.microbadger.com/badges/image/traccar/traccar:4.4-alpine.svg)](https://microbadger.com/images/traccar/traccar:4.4-alpine)
-- **4.4-debian** ([debian/Dockerfile](https://github.com/traccar/traccar-docker/blob/v4.4/debian/Dockerfile)) [![](https://images.microbadger.com/badges/image/traccar/traccar:4.4-debian.svg)](https://microbadger.com/images/traccar/traccar:4.4-debian)
-- **4.3-alpine**, **4.3** ([alpine/Dockerfile](https://github.com/traccar/traccar-docker/blob/4.3/alpine/Dockerfile)) [![](https://images.microbadger.com/badges/image/traccar/traccar:4.3-alpine.svg)](https://microbadger.com/images/traccar/traccar:4.3-alpine)
-- **4.3-debian** ([debian/Dockerfile](https://github.com/traccar/traccar-docker/blob/4.3/debian/Dockerfile)) [![](https://images.microbadger.com/badges/image/traccar/traccar:4.3-debian.svg)](https://microbadger.com/images/traccar/traccar:4.3-debian)
-- **4.2-alpine**, **4.2** ([alpine/Dockerfile](https://github.com/traccar/traccar-docker/blob/4.2/alpine/Dockerfile)) [![](https://images.microbadger.com/badges/image/traccar/traccar:4.2-alpine.svg)](https://microbadger.com/images/traccar/traccar:4.2-alpine)
-- **4.2-debian** ([debian/Dockerfile](https://github.com/traccar/traccar-docker/blob/4.2/debian/Dockerfile)) [![](https://images.microbadger.com/badges/image/traccar/traccar:4.2-debian.svg)](https://microbadger.com/images/traccar/traccar:4.2-debian)
-- **4.1-alpine**, **4.1** ([alpine/Dockerfile](https://github.com/traccar/traccar-docker/blob/4.1/alpine/Dockerfile)) [![](https://images.microbadger.com/badges/image/traccar/traccar:4.1-alpine.svg)](https://microbadger.com/images/traccar/traccar:4.1-alpine)
-- **4.1-debian** ([debian/Dockerfile](https://github.com/traccar/traccar-docker/blob/4.1/debian/Dockerfile)) [![](https://images.microbadger.com/badges/image/traccar/traccar:4.1-debian.svg)](https://microbadger.com/images/traccar/traccar:4.1-debian)
-- **4.0-alpine**, **4.0** ([alpine/Dockerfile](https://github.com/traccar/traccar-docker/blob/4.0/alpine/Dockerfile)) [![](https://images.microbadger.com/badges/image/traccar/traccar:4.0-alpine.svg)](https://microbadger.com/images/traccar/traccar:4.0-alpine)
-- **4.0-debian** ([debian/Dockerfile](https://github.com/traccar/traccar-docker/blob/4.0/debian/Dockerfile)) [![](https://images.microbadger.com/badges/image/traccar/traccar:4.0-debian.svg)](https://microbadger.com/images/traccar/traccar:4.0-debian)
-- **3.17-alpine**, **3.17** ([alpine/Dockerfile](https://github.com/traccar/traccar-docker/blob/3.17/alpine/Dockerfile)) [![](https://images.microbadger.com/badges/image/traccar/traccar:3.17-alpine.svg)](https://microbadger.com/images/traccar/traccar:3.17-alpine)
-- **3.17-debian** ([debian/Dockerfile](https://github.com/traccar/traccar-docker/blob/3.17/debian/Dockerfile)) [![](https://images.microbadger.com/badges/image/traccar/traccar:3.17-debian.svg)](https://microbadger.com/images/traccar/traccar:3.17-debian)
-- **3.16-alpine**, **3.16** ([alpine/Dockerfile](https://github.com/traccar/traccar-docker/blob/3.16/alpine/Dockerfile)) [![](https://images.microbadger.com/badges/image/traccar/traccar:3.16-alpine.svg)](https://microbadger.com/images/traccar/traccar:3.16-alpine)
-- **3.16-debian** ([debian/Dockerfile](https://github.com/traccar/traccar-docker/blob/3.16/debian/Dockerfile)) [![](https://images.microbadger.com/badges/image/traccar/traccar:3.16-debian.svg)](https://microbadger.com/images/traccar/traccar:3.16-debian)
+### Available tags:
+- **4.8-alpine**, **4-alpine**, **4.8**, **alpine**, **latest**
+- **4.8-debian**, **4-debian**, **debian**
+- **4.7-alpine**, **4.7**
+- **4.7-debian**
+- **4.6-alpine**, **4.6**
+- **4.6-debian**
+- **4.5-alpine**, **4.5**
+- **4.5-debian**
+- **4.4-alpine**, **4.4**
+- **4.4-debian**
+- **4.3-alpine**, **4.3**
+- **4.3-debian**
+- **4.2-alpine**, **4.2**
+- **4.2-debian**
+- **4.1-alpine**, **4.1**
+- **4.1-debian**
+- **4.0-alpine**, **4.0**
+- **4.0-debian**
+- **3.17-alpine**, **3.17**
+- **3.17-debian**
+- **3.16-alpine**, **3.16**
+- **3.16-debian**
 
-### Container creation example:
+### Container create example:
 1. **Create work directories:**
     ```bash
     mkdir -p /var/docker/traccar/logs
@@ -61,7 +64,7 @@ Official website: <https://www.traccar.org>
     traccar/traccar:latest
     ```
 
-### Default JRE options:
+### Default JVM options:
 - -Xms512m
 - -Xmx512m
 - -Djava.net.preferIPv4Stack=true
