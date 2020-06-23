@@ -61,6 +61,7 @@ Official website: <https://www.traccar.org>
     -p 5000-5150:5000-5150/udp \
     -v /var/docker/traccar/logs:/opt/traccar/logs:rw \
     -v /var/docker/traccar/traccar.xml:/opt/traccar/conf/traccar.xml:ro \
+    -v /var/docker/traccar/data:/opt/traccar/data:rw \
     traccar/traccar:latest
     ```
 
