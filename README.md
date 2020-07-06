@@ -3,15 +3,17 @@ Traccar in Docker
 
 Traccar GPS Tracking System in Docker image.
 
-Official website: <https://www.traccar.org>
+Official website: <https://www.traccar.org>  
+DockerHub image: <https://hub.docker.com/r/traccar/traccar>
 
-
-[![](https://images.microbadger.com/badges/version/traccar/traccar:4.8.svg)](https://microbadger.com/images/traccar/traccar:4.8)
-[![](https://images.microbadger.com/badges/image/traccar/traccar:4.8.svg)](https://microbadger.com/images/traccar/traccar:4.8)
+[![](https://images.microbadger.com/badges/version/traccar/traccar:4.9.svg)](https://microbadger.com/images/traccar/traccar:4.9)
+[![](https://images.microbadger.com/badges/image/traccar/traccar:4.9.svg)](https://microbadger.com/images/traccar/traccar:4.9)
 
 ### Available tags:
-- **4.8-alpine**, **4-alpine**, **4.8**, **alpine**, **latest**
-- **4.8-debian**, **4-debian**, **debian**
+- **4.9-alpine**, **4-alpine**, **4.9**, **alpine**, **latest**
+- **4.9-debian**, **4-debian**, **debian**
+- **4.8-alpine**, **4.8**
+- **4.8-debian**
 - **4.7-alpine**, **4.7**
 - **4.7-debian**
 - **4.6-alpine**, **4.6**
