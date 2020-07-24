@@ -10,30 +10,9 @@ DockerHub image: <https://hub.docker.com/r/traccar/traccar>
 [![](https://images.microbadger.com/badges/image/traccar/traccar:4.9.svg)](https://microbadger.com/images/traccar/traccar:4.9)
 
 ### Available tags:
-- **4.9-alpine**, **4-alpine**, **4.9**, **alpine**, **latest**
-- **4.9-debian**, **4-debian**, **debian**
-- **4.8-alpine**, **4.8**
-- **4.8-debian**
-- **4.7-alpine**, **4.7**
-- **4.7-debian**
-- **4.6-alpine**, **4.6**
-- **4.6-debian**
-- **4.5-alpine**, **4.5**
-- **4.5-debian**
-- **4.4-alpine**, **4.4**
-- **4.4-debian**
-- **4.3-alpine**, **4.3**
-- **4.3-debian**
-- **4.2-alpine**, **4.2**
-- **4.2-debian**
-- **4.1-alpine**, **4.1**
-- **4.1-debian**
-- **4.0-alpine**, **4.0**
-- **4.0-debian**
-- **3.17-alpine**, **3.17**
-- **3.17-debian**
-- **3.16-alpine**, **3.16**
-- **3.16-debian**
+- **\<branch-name\>-alpine**(for example: master-alpine),
+  - all alpine images are multiarch
+- **\<branch-name\>-debian**(for example: master-debian)
 
 ### Container create example:
 1. **Create work directories:**
