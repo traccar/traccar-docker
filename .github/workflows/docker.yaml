@@ -1,0 +1,32 @@
+- name: Checkout
+  uses: actions/checkout@v1
+- name: Publish changed images
+  uses: dawidd6/action-docker-publish-changed@v2
+  with:
+    docker_username: ${{github.event.repository.owner.login}}
+    docker_password: ${{secrets.PASS}}
+    github_token: ${{secrets.GITHUB_TOKEN}}
+    platforms: linux/amd64,linux/arm64,linux/arm
+    tag: latest
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        name: Build image job
+        steps:
+            - name: Checkout master
+              uses: actions/checkout@master
+            - name: Build and publish image
+              uses: ilteoood/docker_buildx@master
+              with:
+                publish: true
+                imageName: arribada/traccar
+                dockerHubUser: ${{ secrets.DOCKER_USER }}
+                dockerHubPassword: ${{ secrets.DOCKER_PASS }}
+                dockerFile: alpine/Dockerfile
