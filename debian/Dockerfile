@@ -1,4 +1,4 @@
-FROM openjdk:8-jre
+FROM openjdk:8-jre-slim
 
 ENV TRACCAR_VERSION 4.9
 

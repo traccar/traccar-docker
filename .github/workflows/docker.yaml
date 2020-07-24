@@ -1,7 +1,5 @@
 on:
-  push:
-    paths:
-      - '**/Dockerfile'
+  push
 jobs:
     push-alpine:
         runs-on: ubuntu-latest
@@ -16,7 +14,7 @@ jobs:
               with:
                 publish: true
                 tag: ${GITHUB_REF##*/}-alpine
-                imageName: arribada/traccar
+                imageName: traccar/traccar
                 dockerHubUser: ${{ secrets.DOCKER_USER }}
                 dockerHubPassword: ${{ secrets.DOCKER_PASS }}
                 dockerFile: alpine/Dockerfile
@@ -34,7 +32,7 @@ jobs:
                 publish: true
                 tag: ${GITHUB_REF##*/}-debian
                 platform: linux/amd64
-                imageName: arribada/traccar
+                imageName: traccar/traccar
                 dockerHubUser: ${{ secrets.DOCKER_USER }}
                 dockerHubPassword: ${{ secrets.DOCKER_PASS }}
                 dockerFile: debian/Dockerfile
