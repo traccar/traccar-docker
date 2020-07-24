@@ -1,3 +1,5 @@
+![.github/workflows/docker.yaml](https://github.com/arribada/traccar-docker/workflows/.github/workflows/docker.yaml/badge.svg)
+
 Traccar in Docker
 ---
 
