@@ -4,7 +4,6 @@ ENV TRACCAR_VERSION 4.9
 
 WORKDIR /opt/traccar
 
-
 RUN set -ex && \
     apk add --no-cache --no-progress wget && \
     wget -qO /tmp/traccar.zip https://github.com/traccar/traccar/releases/download/v$TRACCAR_VERSION/traccar-other-$TRACCAR_VERSION.zip && \
