@@ -2,21 +2,37 @@ on:
   push:
     branches:
       - main
-    paths:
-      - '**/Dockerfile'
+    # paths:
+    #   - '**/Dockerfile'
 
 jobs:
-    build:
+    push-alpine:
         runs-on: ubuntu-latest
-        name: Build image job
+        name: Push alpine image
         steps:
             - name: Checkout master
-              uses: actions/checkout@master
+              uses: actions/checkout@main
             - name: Build and publish image
-              uses: ilteoood/docker_buildx@master
+              uses: ilteoood/docker_buildx@main
               with:
                 publish: true
+                tag: alpine
                 imageName: arribada/traccar
                 dockerHubUser: ${{ secrets.DOCKER_USER }}
                 dockerHubPassword: ${{ secrets.DOCKER_PASS }}
                 dockerFile: alpine/Dockerfile
+    push-debian:
+        runs-on: ubuntu-latest
+        name: Push debian image
+        steps:
+            - name: Checkout master
+              uses: actions/checkout@main
+            - name: Build and publish image
+              uses: ilteoood/docker_buildx@main
+              with:
+                publish: true
+                tag: debian
+                imageName: arribada/traccar
+                dockerHubUser: ${{ secrets.DOCKER_USER }}
+                dockerHubPassword: ${{ secrets.DOCKER_PASS }}
+                dockerFile: debian/Dockerfile
