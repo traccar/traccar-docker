@@ -1,10 +1,7 @@
 on:
   push:
-    branches:
-      - master
     paths:
       - '**/Dockerfile'
-
 jobs:
     push-alpine:
         runs-on: ubuntu-latest
@@ -12,11 +9,13 @@ jobs:
         steps:
             - name: Checkout master
               uses: actions/checkout@master
+            - name: Print Branch name
+              run: echo running on branch ${GITHUB_REF##*/}
             - name: Build and publish image
               uses: ilteoood/docker_buildx@master
               with:
                 publish: true
-                tag: alpine
+                tag: ${GITHUB_REF##*/}-alpine
                 imageName: arribada/traccar
                 dockerHubUser: ${{ secrets.DOCKER_USER }}
                 dockerHubPassword: ${{ secrets.DOCKER_PASS }}
@@ -27,11 +26,13 @@ jobs:
         steps:
             - name: Checkout master
               uses: actions/checkout@master
+            - name: Print Branch name
+              run: echo running on branch ${GITHUB_REF##*/}
             - name: Build and publish image
               uses: ilteoood/docker_buildx@master
               with:
                 publish: true
-                tag: debian
+                tag: ${GITHUB_REF##*/}-debian
                 platform: linux/amd64
                 imageName: arribada/traccar
                 dockerHubUser: ${{ secrets.DOCKER_USER }}
