@@ -50,5 +50,5 @@ jobs:
       uses: docker/build-push-action@v2
       with:
         file: ${{ matrix.base }}/Dockerfile
-        tags: ${{ fromJson(env.DOCKERHUB_IMAGE_TAGS) }}
+        tags: ${{ join(fromJson(env.DOCKERHUB_IMAGE_TAGS), '\n') }}
         push: true
