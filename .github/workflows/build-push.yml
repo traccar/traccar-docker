@@ -28,7 +28,7 @@ jobs:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
     - name: Set environment DOCKERHUB_IMAGE_TAGS on master
-      if: ${{ github.ref == 'refs/heads/master' && matrix.base == 'alpine' }}
+      if: github.ref == 'refs/heads/master' && matrix.base == 'alpine'
       run: echo "DOCKERHUB_IMAGE_TAGS=$DOCKERHUB_REPOSITORY:latest" >> $GITHUB_ENV
     - name: Set environment DOCKERHUB_IMAGE_TAGS
       if: github.ref != 'refs/heads/master'
@@ -38,13 +38,13 @@ jobs:
         _VERSION=${_BRANCH#v*}
         _MAJOR_VERSION=${_VERSION%.*}
 
-        _DOCKERHUB_IMAGE_TAGS="$DOCKERHUB_REPOSITORY:$_VERSION-${{ matrix.base }}"
-        _DOCKERHUB_IMAGE_TAGS+="\n$DOCKERHUB_REPOSITORY:$_MAJOR_VERSION-${{ matrix.base }}"
-        _DOCKERHUB_IMAGE_TAGS+="\n$DOCKERHUB_REPOSITORY:${{ matrix.base }}"
+        _DOCKERHUB_IMAGE_TAGS="\"$DOCKERHUB_REPOSITORY:$_VERSION-${{ matrix.base }}\""
+        _DOCKERHUB_IMAGE_TAGS+=", \"$DOCKERHUB_REPOSITORY:$_MAJOR_VERSION-${{ matrix.base }}\""
+        _DOCKERHUB_IMAGE_TAGS+=", \"$DOCKERHUB_REPOSITORY:${{ matrix.base }}\""
 
         if [ "${{ matrix.base }}" == "alpine" ]; then
-          _DOCKERHUB_IMAGE_TAGS+="\n$DOCKERHUB_REPOSITORY:$_VERSION"
-          _DOCKERHUB_IMAGE_TAGS+="\n$DOCKERHUB_REPOSITORY:$_MAJOR_VERSION"
+          _DOCKERHUB_IMAGE_TAGS+=", \"$DOCKERHUB_REPOSITORY:$_VERSION\""
+          _DOCKERHUB_IMAGE_TAGS+=", \"$DOCKERHUB_REPOSITORY:$_MAJOR_VERSION\""
         fi
 
         echo "DOCKERHUB_IMAGE_TAGS=$_DOCKERHUB_IMAGE_TAGS" >> $GITHUB_ENV
@@ -53,5 +53,5 @@ jobs:
       uses: docker/build-push-action@v2
       with:
         file: ${{ matrix.base }}/Dockerfile
-        tags: ${{ env.DOCKERHUB_IMAGE_TAGS }}
+        tags: toJSON("[ ${{ env.DOCKERHUB_IMAGE_TAGS }} ]")
         push: true
