@@ -10,7 +10,7 @@ DockerHub image: <https://hub.docker.com/r/traccar/traccar>
 [![](https://images.microbadger.com/badges/image/traccar/traccar:4.11.svg)](https://microbadger.com/images/traccar/traccar:4.11)
 
 ### Available tags:
-- **4.11-alpine**, **4-alpine**, **4.11**, **alpine**, **latest**
+- **4.11-alpine**, **4-alpine**, **alpine**, **4.11**, **4**, **latest**
 - **4.11-debian**, **4-debian**, **debian**
 - **4.10-alpine**, **4.10**
 - **4.10-debian**
