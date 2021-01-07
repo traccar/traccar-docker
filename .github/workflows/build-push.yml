@@ -23,13 +23,6 @@ jobs:
     strategy:
       matrix:
         os: [alpine, debian, ubuntu]
-        platform:
-        - os: alpine
-          arch: linux/amd64,linux/386,linux/arm/v6
-        - os: debian
-          arch: linux/amd64
-        - os: ubuntu
-          arch: linux/amd64,linux/arm/v7,linux/arm64/v8
     steps:
     - name: Checkout
       uses: actions/checkout@v2
