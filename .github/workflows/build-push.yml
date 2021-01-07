@@ -3,6 +3,8 @@ name: Build and push docker images
 
 env:
   DOCKERHUB_REPOSITORY: traccar/traccar
+  DOCKERHUB_IMAGE_TAGS:
+  DOCKERHUB_IMAGE_EXTEND_PLATFORMS:
 
 on:
   push:
@@ -10,12 +12,17 @@ on:
     - master
     - v[0-9]+.[0-9]+
 
+defaults:
+  run:
+    shell: bash
+
 jobs:
   docker-build-push:
     name: Build and push docker images
     runs-on: ubuntu-20.04
     strategy:
       matrix:
+        os: [alpine, debian, ubuntu]
         platform:
         - os: alpine
           arch: linux/amd64,linux/386,linux/arm/v6
@@ -36,28 +43,34 @@ jobs:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
     - name: Set environment DOCKERHUB_IMAGE_TAGS on master
-      if: github.ref == 'refs/heads/master' && matrix.platform.os == 'alpine'
+      if: github.ref == 'refs/heads/master' && matrix.os == 'alpine'
       run: echo "DOCKERHUB_IMAGE_TAGS=$DOCKERHUB_REPOSITORY:latest" >> $GITHUB_ENV
     - name: Set environment DOCKERHUB_IMAGE_TAGS
       if: github.ref != 'refs/heads/master'
-      shell: bash
       run: |
         _BRANCH=${GITHUB_REF##*/}
         _VERSION=${_BRANCH#v*}
         _MAJOR_VERSION=${_VERSION%.*}
-        _DOCKERHUB_IMAGE_TAGS="$DOCKERHUB_REPOSITORY:$_VERSION-${{ matrix.platform.os }}"
-        _DOCKERHUB_IMAGE_TAGS+=",$DOCKERHUB_REPOSITORY:$_MAJOR_VERSION-${{ matrix.platform.os }}"
-        _DOCKERHUB_IMAGE_TAGS+=",$DOCKERHUB_REPOSITORY:${{ matrix.platform.os }}"
-        if [ "${{ matrix.platform.os }}" == "alpine" ]; then
+        _DOCKERHUB_IMAGE_TAGS="$DOCKERHUB_REPOSITORY:$_VERSION-${{ matrix.os }}"
+        _DOCKERHUB_IMAGE_TAGS+=",$DOCKERHUB_REPOSITORY:$_MAJOR_VERSION-${{ matrix.os }}"
+        _DOCKERHUB_IMAGE_TAGS+=",$DOCKERHUB_REPOSITORY:${{ matrix.os }}"
+        if [ "${{ matrix.os }}" == "alpine" ]; then
           _DOCKERHUB_IMAGE_TAGS+=",$DOCKERHUB_REPOSITORY:$_VERSION"
           _DOCKERHUB_IMAGE_TAGS+=",$DOCKERHUB_REPOSITORY:$_MAJOR_VERSION"
         fi
         echo "DOCKERHUB_IMAGE_TAGS=$_DOCKERHUB_IMAGE_TAGS" >> $GITHUB_ENV
+    - name: Set environment DOCKERHUB_IMAGE_EXTEND_PLATFORMS
+      run: |
+        if [ "${{ matrix.os }}" == "alpine" ]; then
+          echo "DOCKERHUB_IMAGE_EXTEND_PLATFORMS=,linux/386,linux/arm/v6" >> $GITHUB_ENV
+        elif [ "${{ matrix.os }}" == "ubuntu" ]; then
+          echo "DOCKERHUB_IMAGE_EXTEND_PLATFORMS=,linux/arm/v7,linux/arm64/v8" >> $GITHUB_ENV
+        fi
     - name: Build and push
       if: env.DOCKERHUB_IMAGE_TAGS != ''
       uses: docker/build-push-action@v2
       with:
-        file: Dockerfile.${{ matrix.platform.os }}
+        file: Dockerfile.${{ matrix.os }}
         tags: ${{ env.DOCKERHUB_IMAGE_TAGS }}
-        platforms: matrix.platform.arch
+        platforms: linux/amd64${{ env.DOCKERHUB_IMAGE_EXTEND_PLATFORMS }}
         push: true
