@@ -9,13 +9,14 @@ Maintainer: [Maxim Zalysin](https://github.com/magna-z)
 
 ## Available tags:
 #### 4.X
-- **4.11-alpine**, **4-alpine**, **alpine**, **4.11**, **4**, **latest** ![](https://img.shields.io/microbadger/layers/traccar/traccar/alpine) ![](https://img.shields.io/docker/image-size/traccar/traccar/alpine)
-- **4.11-debian**, **4-debian**, **debian** ![](https://img.shields.io/microbadger/layers/traccar/traccar/debian) ![](https://img.shields.io/docker/image-size/traccar/traccar/debian)
-- **4.11-ubuntu**, **4-ubuntu**, **ubuntu** ![](https://img.shields.io/microbadger/layers/traccar/traccar/ubuntu) ![](https://img.shields.io/docker/image-size/traccar/traccar/ubuntu)
+- **4.12-alpine**, **4-alpine**, **alpine**, **4.12**, **4**, **latest** ![](https://img.shields.io/microbadger/layers/traccar/traccar/4.12-alpine) ![](https://img.shields.io/docker/image-size/traccar/traccar/4.12-alpine)
+- **4.12-debian**, **4-debian**, **debian** ![](https://img.shields.io/microbadger/layers/traccar/traccar/4.12-debian) ![](https://img.shields.io/docker/image-size/traccar/traccar/4.12-debian)
+- **4.12-ubuntu**, **4-ubuntu**, **ubuntu** ![](https://img.shields.io/microbadger/layers/traccar/traccar/4.12-ubuntu) ![](https://img.shields.io/docker/image-size/traccar/traccar/4.12-ubuntu)
+- **4.11-alpine**, **4.11**
+- **4.11-debian**
+- **4.11-ubuntu**
 - **4.10-alpine**, **4.10**
 - **4.10-debian**
-- **4.9-alpine**, **4.9**
-- **4.9-debian**
 - ...
 - **4.0-alpine**, **4.0**
 - **4.0-debian**

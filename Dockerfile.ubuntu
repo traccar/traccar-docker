@@ -1,6 +1,6 @@
-FROM adoptopenjdk:8-jre-hotspot-focal
+FROM adoptopenjdk:8-jre-hotspot-bionic
 
-ENV TRACCAR_VERSION 4.11
+ENV TRACCAR_VERSION 4.12
 
 WORKDIR /opt/traccar
 
