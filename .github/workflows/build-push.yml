@@ -53,9 +53,7 @@ jobs:
     - name: Set environment DOCKERHUB_IMAGE_PLATFORMS
       run: |
         _DOCKERHUB_IMAGE_PLATFORMS="linux/amd64"
-        if [ "${{ matrix.os }}" == "alpine" ]; then
-          _DOCKERHUB_IMAGE_PLATFORMS+=",linux/386"
-        elif [ "${{ matrix.os }}" == "debian" ]; then
+        if [ "${{ matrix.os }}" == "debian" ]; then
           _DOCKERHUB_IMAGE_PLATFORMS+=",linux/arm64"
         elif [ "${{ matrix.os }}" == "ubuntu" ]; then
           _DOCKERHUB_IMAGE_PLATFORMS+=",linux/arm/v7,linux/arm64"
