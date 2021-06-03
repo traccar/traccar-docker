@@ -30,8 +30,8 @@ Maintainer: [Maxim Zalysin](https://github.com/magna-z)
 - **3.16-debian**
 
 ## Available multi-platform images:
-**Alpine based**: linux/amd64, linux/386, linux/arm/v6  
-**Debian based**: linux/amd64  
+**Alpine based**: linux/amd64, linux/386  
+**Debian based**: linux/amd64, linux/arm64/v8  
 **Ubuntu based**: linux/amd64, linux/arm/v7, linux/arm64/v8
 
 ## Container create example:

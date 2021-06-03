@@ -1,4 +1,4 @@
-FROM adoptopenjdk:8-jre-hotspot-bionic
+FROM adoptopenjdk:11-jre-hotspot-focal
 
 ENV TRACCAR_VERSION 4.13
 
