@@ -1,6 +1,6 @@
-FROM openjdk:11-jre-slim
+FROM openjdk:11-jre-slim-buster
 
-ENV TRACCAR_VERSION 4.13
+ENV TRACCAR_VERSION 4.14
 
 WORKDIR /opt/traccar
 
