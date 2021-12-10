@@ -2,7 +2,7 @@
 name: Build and push docker images
 
 env:
-  DOCKERHUB_REPOSITORY: traccar/traccar
+  DOCKERHUB_REPOSITORY: ahmadsadiq89/trackmyauto
 
 on:
   push:
