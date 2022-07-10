@@ -9,9 +9,12 @@ Maintainer: [Maxim Zalysin](https://github.com/magna-z)
 
 ## Available tags:
 #### 5.X
-- **5.0-alpine**, **5-alpine**, **alpine**, **5.0**, **5**, **latest** ![](https://img.shields.io/microbadger/layers/traccar/traccar/5.0-alpine) ![](https://img.shields.io/docker/image-size/traccar/traccar/5.0-alpine)
-- **5.0-debian**, **5-debian**, **debian** ![](https://img.shields.io/microbadger/layers/traccar/traccar/5.0-debian) ![](https://img.shields.io/docker/image-size/traccar/traccar/5.0-debian)
-- **5.0-ubuntu**, **5-ubuntu**, **ubuntu** ![](https://img.shields.io/microbadger/layers/traccar/traccar/5.0-ubuntu) ![](https://img.shields.io/docker/image-size/traccar/traccar/5.0-ubuntu)
+- **5.1-alpine**, **5-alpine**, **alpine**, **5.1**, **5**, **latest** ![](https://img.shields.io/microbadger/layers/traccar/traccar/5.1-alpine) ![](https://img.shields.io/docker/image-size/traccar/traccar/5.1-alpine)
+- **5.1-debian**, **5-debian**, **debian** ![](https://img.shields.io/microbadger/layers/traccar/traccar/5.1-debian) ![](https://img.shields.io/docker/image-size/traccar/traccar/5.1-debian)
+- **5.1-ubuntu**, **5-ubuntu**, **ubuntu** ![](https://img.shields.io/microbadger/layers/traccar/traccar/5.1-ubuntu) ![](https://img.shields.io/docker/image-size/traccar/traccar/5.1-ubuntu)
+- **5.0-alpine**, **5.0**
+- **5.0-debian**
+- **5.0-ubuntu**
 #### 4.X
 - **4.15-alpine**, **4.15**
 - **4.15-debian**
