@@ -1,6 +1,6 @@
 FROM alpine:3.16
 
-ENV TRACCAR_VERSION 5.1
+ENV TRACCAR_VERSION 5.2
 
 WORKDIR /opt/traccar
 
