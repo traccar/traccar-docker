@@ -4,14 +4,17 @@ Traccar in Docker
 **Traccar GPS Tracking System in Docker image.**
 
 Official website: <https://www.traccar.org>  
-DockerHub image: <https://hub.docker.com/r/traccar/traccar>  
+DockerHub image: <https://hub.docker.com/r/traccar/traccar> ![](https://img.shields.io/docker/stars/traccar/traccar) ![](https://img.shields.io/docker/pulls/traccar/traccar)  
 Maintainer: [Maxim Zalysin](https://github.com/magna-z)
 
 ## Available tags:
 #### 5.X
-- **5.1-alpine**, **5-alpine**, **alpine**, **5.1**, **5**, **latest** ![](https://img.shields.io/microbadger/layers/traccar/traccar/5.1-alpine) ![](https://img.shields.io/docker/image-size/traccar/traccar/5.1-alpine)
-- **5.1-debian**, **5-debian**, **debian** ![](https://img.shields.io/microbadger/layers/traccar/traccar/5.1-debian) ![](https://img.shields.io/docker/image-size/traccar/traccar/5.1-debian)
-- **5.1-ubuntu**, **5-ubuntu**, **ubuntu** ![](https://img.shields.io/microbadger/layers/traccar/traccar/5.1-ubuntu) ![](https://img.shields.io/docker/image-size/traccar/traccar/5.1-ubuntu)
+- **5.2-alpine**, **5-alpine**, **alpine**, **5.2**, **5**, **latest** ![](https://img.shields.io/docker/image-size/traccar/traccar/5.2-alpine)
+- **5.2-debian**, **5-debian**, **debian** ![](https://img.shields.io/docker/image-size/traccar/traccar/5.2-debian)
+- **5.2-ubuntu**, **5-ubuntu**, **ubuntu** ![](https://img.shields.io/docker/image-size/traccar/traccar/5.2-ubuntu)
+- **5.1-alpine**, **5.1**
+- **5.1-debian**
+- **5.1-ubuntu**
 - **5.0-alpine**, **5.0**
 - **5.0-debian**
 - **5.0-ubuntu**
@@ -19,12 +22,6 @@ Maintainer: [Maxim Zalysin](https://github.com/magna-z)
 - **4.15-alpine**, **4.15**
 - **4.15-debian**
 - **4.15-ubuntu**
-- **4.14-alpine**, **4.14**
-- **4.14-debian**
-- **4.14-ubuntu**
-- ...
-- **4.10-alpine**, **4.10**
-- **4.10-debian**
 - ...
 - **4.0-alpine**, **4.0**
 - **4.0-debian**
