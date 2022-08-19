@@ -76,6 +76,6 @@ The `docker run` command also doesn't create a mount point on the host for the d
 The **recommended solution** for production use is to link to an external MySQL database and update the configuration `.xml`-file according to the [Traccar MySQL documentation](https://www.traccar.org/mysql/) and using the `docker run` command as-is.
 
 ## Default JVM options:
-- -Xms512m
-- -Xmx512m
-- -Djava.net.preferIPv4Stack=true
+- `-Xms1g`
+- `-Xmx1g`
+- `-Djava.net.preferIPv4Stack=true`
