@@ -1,6 +1,6 @@
 FROM adoptopenjdk:11-jre-hotspot-focal
 
-ENV TRACCAR_VERSION 5.3
+ENV TRACCAR_VERSION 5.4
 
 WORKDIR /opt/traccar
 
