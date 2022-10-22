@@ -12,30 +12,17 @@ Maintainer: [Maxim Zalysin](https://github.com/magna-z)
 - **5.4-alpine**, **5-alpine**, **alpine**, **5.4**, **5**, **latest** ![](https://img.shields.io/docker/image-size/traccar/traccar/5.4-alpine)
 - **5.4-debian**, **5-debian**, **debian** ![](https://img.shields.io/docker/image-size/traccar/traccar/5.4-debian)
 - **5.4-ubuntu**, **5-ubuntu**, **ubuntu** ![](https://img.shields.io/docker/image-size/traccar/traccar/5.4-ubuntu)
-- **5.3-alpine**, **5.3**
-- **5.3-debian**
-- **5.3-ubuntu**
-- **5.2-alpine**, **5.2**
-- **5.2-debian**
-- **5.2-ubuntu**
-- **5.1-alpine**, **5.1**
-- **5.1-debian**
-- **5.1-ubuntu**
-- **5.0-alpine**, **5.0**
-- **5.0-debian**
-- **5.0-ubuntu**
+- _**5.3**, **5.3-alpine** / **5.3-debian** / **5.3-ubuntu**_
+- _**5.2**, **5.2-alpine** / **5.2-debian** / **5.2-ubuntu**_
+- _**5.1**, **5.1-alpine** / **5.1-debian** / **5.1-ubuntu**_
+- _**5.0**, **5.0-alpine** / **5.0-debian** / **5.0-ubuntu**_
 #### 4.X
-- **4.15-alpine**, **4.15**
-- **4.15-debian**
-- **4.15-ubuntu**
+- _**4.15**, **4.15-alpine** / **4.15-debian** / **4.15-ubuntu**_
 - ...
-- **4.0-alpine**, **4.0**
-- **4.0-debian**
+- _**4.0**, **4.0-alpine** / **4.0-debian**_
 #### 3.X
-- **3.17-alpine**, **3.17**
-- **3.17-debian**
-- **3.16-alpine**, **3.16**
-- **3.16-debian**
+- _**3.17**, **3.17-alpine** / **3.17-debian**_
+- _**3.16**, **3.16-alpine** / **3.16-debian**_
 
 ## Available multi-platform images:
 **Alpine based**: linux/amd64  
@@ -45,7 +32,7 @@ Maintainer: [Maxim Zalysin](https://github.com/magna-z)
 ## Container create example:
 1. **Create work directories:**
     ```bash
-    mkdir -p /var/docker/traccar/logs
+    mkdir -p /opt/traccar/logs
     ```
 
 1. **Get default traccar.xml:**
@@ -54,7 +41,7 @@ Maintainer: [Maxim Zalysin](https://github.com/magna-z)
     --rm \
     --entrypoint cat \
     traccar/traccar:latest \
-    /opt/traccar/conf/traccar.xml > /var/docker/traccar/traccar.xml
+    /opt/traccar/conf/traccar.xml > /opt/traccar/traccar.xml
     ```
 
 1. **Edit traccar.xml:** <https://www.traccar.org/configuration-file/>
@@ -62,14 +49,14 @@ Maintainer: [Maxim Zalysin](https://github.com/magna-z)
 1. **Create container:**
     ```bash
     docker run \
-    -d --restart always \
     --name traccar \
     --hostname traccar \
-    -p 80:8082 \
-    -p 5000-5150:5000-5150 \
-    -p 5000-5150:5000-5150/udp \
-    -v /var/docker/traccar/logs:/opt/traccar/logs:rw \
-    -v /var/docker/traccar/traccar.xml:/opt/traccar/conf/traccar.xml:ro \
+    --detach --restart unless-stopped \
+    --publish 80:8082 \
+    --publish 5000-5150:5000-5150 \
+    --publish 5000-5150:5000-5150/udp \
+    --volume /opt/traccar/logs:/opt/traccar/logs:rw \
+    --volume /opt/traccar/traccar.xml:/opt/traccar/conf/traccar.xml:ro \
     traccar/traccar:latest
     ```
 
