@@ -9,9 +9,9 @@ Maintainer: [Maxim Zalysin](https://github.com/magna-z)
 
 ## Available tags:
 #### 5.X
-- **5.5-alpine**, **5-alpine**, **alpine**, **5.5**, **5**, **latest** ![](https://img.shields.io/docker/image-size/traccar/traccar/5.5-alpine)
-- **5.5-debian**, **5-debian**, **debian** ![](https://img.shields.io/docker/image-size/traccar/traccar/5.5-debian)
-- **5.5-ubuntu**, **5-ubuntu**, **ubuntu** ![](https://img.shields.io/docker/image-size/traccar/traccar/5.5-ubuntu)
+- **5.6-alpine**, **5-alpine**, **alpine**, **5.6**, **5**, **latest** ![](https://img.shields.io/docker/image-size/traccar/traccar/5.6-alpine)
+- **5.6-debian**, **5-debian**, **debian** ![](https://img.shields.io/docker/image-size/traccar/traccar/5.6-debian)
+- **5.6-ubuntu**, **5-ubuntu**, **ubuntu** ![](https://img.shields.io/docker/image-size/traccar/traccar/5.6-ubuntu)
 - _..._
 - _**5.0**, **5.0-alpine** / **5.0-debian** / **5.0-ubuntu**_
 #### 4.X
