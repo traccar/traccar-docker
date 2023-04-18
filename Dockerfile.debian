@@ -1,6 +1,6 @@
 FROM openjdk:11-jre-slim-bullseye
 
-ENV TRACCAR_VERSION 5.6
+ENV TRACCAR_VERSION 5.7
 
 WORKDIR /opt/traccar
 
