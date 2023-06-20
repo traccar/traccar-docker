@@ -24,8 +24,8 @@ Maintainer: [Maxim Zalysin](https://github.com/magna-z)
 
 ## Available multi-platform images:
 **Alpine based**: linux/amd64  
-**Debian based**: linux/amd64, linux/arm64/v8  
-**Ubuntu based**: linux/amd64, linux/arm/v7, linux/arm64/v8
+**Debian based**: linux/amd64, linux/arm64  
+**Ubuntu based**: linux/amd64, linux/arm/v7, linux/arm64
 
 ## Container create example:
 1. **Create work directories:**
