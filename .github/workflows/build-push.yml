@@ -52,11 +52,9 @@ jobs:
           echo "DOCKERHUB_IMAGE_TAGS=$_DOCKERHUB_IMAGE_TAGS" >> $GITHUB_ENV
       - name: Set environment DOCKERHUB_IMAGE_PLATFORMS
         run: |
-          _DOCKERHUB_IMAGE_PLATFORMS="linux/amd64"
-          if [ "${{ matrix.os }}" == "debian" ]; then
-            _DOCKERHUB_IMAGE_PLATFORMS+=",linux/arm64"
-          elif [ "${{ matrix.os }}" == "ubuntu" ]; then
-            _DOCKERHUB_IMAGE_PLATFORMS+=",linux/arm/v7,linux/arm64"
+          _DOCKERHUB_IMAGE_PLATFORMS="linux/amd64,linux/arm64"
+          if [ "${{ matrix.os }}" == "ubuntu" ]; then
+            _DOCKERHUB_IMAGE_PLATFORMS+=",linux/arm/v7"
           fi
           echo "DOCKERHUB_IMAGE_PLATFORMS=$_DOCKERHUB_IMAGE_PLATFORMS" >> $GITHUB_ENV
       - name: Build and push
