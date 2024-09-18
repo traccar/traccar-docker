@@ -1,6 +1,6 @@
 FROM debian:12-slim
 
-ENV TRACCAR_VERSION 6.4
+ENV TRACCAR_VERSION 6.5
 
 WORKDIR /opt/traccar
 
