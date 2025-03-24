@@ -50,6 +50,7 @@ jobs:
             _DOCKERHUB_IMAGE_TAGS+=",$DOCKERHUB_REPOSITORY:$_MAJOR_VERSION"
           fi
           echo "DOCKERHUB_IMAGE_TAGS=$_DOCKERHUB_IMAGE_TAGS" >> $GITHUB_ENV
+          echo "VERSION=$_VERSION"  >> $GITHUB_ENV
       - name: Set environment DOCKERHUB_IMAGE_PLATFORMS
         run: |
           _DOCKERHUB_IMAGE_PLATFORMS="linux/amd64,linux/arm64"
@@ -63,5 +64,6 @@ jobs:
         with:
           file: Dockerfile.${{ matrix.os }}
           tags: ${{ env.DOCKERHUB_IMAGE_TAGS }}
+          labels: org.opencontainers.image.version=${{ env.VERSION }}
           platforms: ${{ env.DOCKERHUB_IMAGE_PLATFORMS }}
           push: true
