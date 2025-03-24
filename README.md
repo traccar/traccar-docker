@@ -61,12 +61,13 @@ Maintainer: [Maxim Zalysin](https://github.com/magna-z)
     --publish 5000-5150:5000-5150/udp \
     --volume /opt/traccar/logs:/opt/traccar/logs:rw \
     --volume /opt/traccar/traccar.xml:/opt/traccar/conf/traccar.xml:ro \
+    --volume /opt/traccar/data:/opt/traccar/data:rw \
     traccar/traccar:latest
     ```
 
 ## Database
 The default when executing the above `docker run` command is an internal H2 database but this should only be for basic use.  
-The `docker run` command also doesn't create a mount point on the host for the data folder which will cause the database to be lost when the container is recreated. This point can be mitigated by adding the line `-v /var/docker/traccar/data:/opt/traccar/data:rw \` after `-v /var/docker/traccar/traccar.xml:/opt/traccar/conf/traccar.xml:ro \` but it will still be using the H2 database.  
+
 The **recommended solution** for production use is to link to an external MySQL database and update the configuration `.xml`-file according to the [Traccar MySQL documentation](https://www.traccar.org/mysql/) and using the `docker run` command as-is.
 
 ## Default JVM options:
