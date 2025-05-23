@@ -6,9 +6,7 @@ env:
 
 on:
   push:
-    branches:
-      - master
-      - v[0-9]+.[0-9]+
+    branches: ["v[0-9]+.[0-9]+.[0-9]+"]
 
 defaults:
   run:
@@ -17,7 +15,7 @@ defaults:
 jobs:
   docker-build-push:
     name: Build and push docker images
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     strategy:
       matrix:
         os: [alpine, debian, ubuntu]
@@ -33,23 +31,24 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-      - name: Set environment DOCKERHUB_IMAGE_TAGS on master
-        if: github.ref == 'refs/heads/master' && matrix.os == 'alpine'
-        run: echo "DOCKERHUB_IMAGE_TAGS=$DOCKERHUB_REPOSITORY:latest" >> $GITHUB_ENV
       - name: Set environment DOCKERHUB_IMAGE_TAGS
         if: github.ref != 'refs/heads/master'
         run: |
-          _BRANCH=${GITHUB_REF##*/}
-          _VERSION=${_BRANCH#v*}
-          _MAJOR_VERSION=${_VERSION%.*}
+          _VERSION=${GITHUB_REF_NAME#v*}
+          _VERSION_MAJOR_MINOR=${_VERSION%.*}
+          _VERSION_MAJOR=${_VERSION_MAJOR_MINOR%.*}
           _DOCKERHUB_IMAGE_TAGS="$DOCKERHUB_REPOSITORY:$_VERSION-${{ matrix.os }}"
-          _DOCKERHUB_IMAGE_TAGS+=",$DOCKERHUB_REPOSITORY:$_MAJOR_VERSION-${{ matrix.os }}"
+          _DOCKERHUB_IMAGE_TAGS+=",$DOCKERHUB_REPOSITORY:$_VERSION_MAJOR_MINOR-${{ matrix.os }}"
+          _DOCKERHUB_IMAGE_TAGS+=",$DOCKERHUB_REPOSITORY:$_VERSION_MAJOR-${{ matrix.os }}"
           _DOCKERHUB_IMAGE_TAGS+=",$DOCKERHUB_REPOSITORY:${{ matrix.os }}"
           if [ "${{ matrix.os }}" == "alpine" ]; then
             _DOCKERHUB_IMAGE_TAGS+=",$DOCKERHUB_REPOSITORY:$_VERSION"
-            _DOCKERHUB_IMAGE_TAGS+=",$DOCKERHUB_REPOSITORY:$_MAJOR_VERSION"
+            _DOCKERHUB_IMAGE_TAGS+=",$DOCKERHUB_REPOSITORY:$_VERSION_MAJOR_MINOR"
+            _DOCKERHUB_IMAGE_TAGS+=",$DOCKERHUB_REPOSITORY:$_VERSION_MAJOR"
+            _DOCKERHUB_IMAGE_TAGS+=",$DOCKERHUB_REPOSITORY:latest"
           fi
           echo "DOCKERHUB_IMAGE_TAGS=$_DOCKERHUB_IMAGE_TAGS" >> $GITHUB_ENV
+          echo "VERSION=$_VERSION" >> $GITHUB_ENV
       - name: Set environment DOCKERHUB_IMAGE_PLATFORMS
         run: |
           _DOCKERHUB_IMAGE_PLATFORMS="linux/amd64,linux/arm64"
@@ -63,5 +62,6 @@ jobs:
         with:
           file: Dockerfile.${{ matrix.os }}
           tags: ${{ env.DOCKERHUB_IMAGE_TAGS }}
+          labels: org.opencontainers.image.version=${{ env.VERSION }}
           platforms: ${{ env.DOCKERHUB_IMAGE_PLATFORMS }}
           push: true
