@@ -9,27 +9,31 @@ Maintainer: [Maxim Zalysin](https://github.com/magna-z)
 
 ## Available tags:
 #### 6.X.X
-- **6.7.0-alpine**, **6-alpine**, **alpine**, **6.7.0**, **6.7**, **6**, **latest** ![](https://img.shields.io/docker/image-size/traccar/traccar/6.7.0-alpine)
-- **6.7.0-debian**, **6-debian**, **6.7-debian**, **debian** ![](https://img.shields.io/docker/image-size/traccar/traccar/6.7.0-debian)
-- **6.7.0-ubuntu**, **6-ubuntu**, **6.7-ubuntu**, **ubuntu** ![](https://img.shields.io/docker/image-size/traccar/traccar/6.7.0-ubuntu)
+- **6.7.1-alpine**, **6-alpine**, **alpine**, **6.7.1**, **6.7**, **6**, **latest** ![](https://img.shields.io/docker/image-size/traccar/traccar/6.7.1-alpine)
+- **6.7.1-debian**, **6-debian**, **6.7-debian**, **debian** ![](https://img.shields.io/docker/image-size/traccar/traccar/6.7.1-debian)
+- **6.7.1-ubuntu**, **6-ubuntu**, **6.7-ubuntu**, **ubuntu** ![](https://img.shields.io/docker/image-size/traccar/traccar/6.7.1-ubuntu)
+- **6.7.0-alpine**, **6.7.0** ![](https://img.shields.io/docker/image-size/traccar/traccar/6.7.0-alpine)
+- **6.7.0-debian** ![](https://img.shields.io/docker/image-size/traccar/traccar/6.7.0-debian)
+- **6.7.0-ubuntu** ![](https://img.shields.io/docker/image-size/traccar/traccar/6.7.0-ubuntu)
+#### 6.X
 - **6.6-alpine**, **6.6** ![](https://img.shields.io/docker/image-size/traccar/traccar/6.6-alpine)
 - **6.6-debian** ![](https://img.shields.io/docker/image-size/traccar/traccar/6.6-debian)
 - **6.6-ubuntu** ![](https://img.shields.io/docker/image-size/traccar/traccar/6.6-ubuntu)
-- _..._
-- _**6.0**, **6.0-alpine** / **6.0-debian** / **6.0-ubuntu**_
+- ...
+- **6.0**, **6.0-alpine**, **6.0-debian**, **6.0-ubuntu**
 #### 5.X
 - **5.12-alpine**, **5-alpine**, **5.12**, **5** ![](https://img.shields.io/docker/image-size/traccar/traccar/5.12-alpine)
 - **5.12-debian**, **5-debian** ![](https://img.shields.io/docker/image-size/traccar/traccar/5.12-debian)
 - **5.12-ubuntu**, **5-ubuntu** ![](https://img.shields.io/docker/image-size/traccar/traccar/5.12-ubuntu)
-- _..._
-- _**5.0**, **5.0-alpine** / **5.0-debian** / **5.0-ubuntu**_
+- ...
+- **5.0**, **5.0-alpine**, **5.0-debian**, **5.0-ubuntu**
 #### 4.X
-- _**4.15**, **4.15-alpine** / **4.15-debian** / **4.15-ubuntu**_
-- _..._
-- _**4.0**, **4.0-alpine** / **4.0-debian**_
+- **4.15**, **4.15-alpine**, **4.15-debian**, **4.15-ubuntu**
+- ...
+- **4.0**, **4.0-alpine**, **4.0-debian**
 #### 3.X
-- _**3.17**, **3.17-alpine** / **3.17-debian**_
-- _**3.16**, **3.16-alpine** / **3.16-debian**_
+- **3.17**, **3.17-alpine**, **3.17-debian**
+- **3.16**, **3.16-alpine**, **3.16-debian**
 
 ## Available multi-platform images:
 **Alpine based**: linux/amd64, linux/arm64  
